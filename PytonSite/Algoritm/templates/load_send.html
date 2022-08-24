@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://gosuclygi.site/css/style.css" type="text/css">
+    <title>Главная страница</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/send/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% ifequal info "Данные успешно добавлены в базу данных" %}
+                <p class="label-info-server succes">{{info}}</p>
+            {% else %}
+                <p class="label-info-server error">{{info}}</p>
+            {% endifequal %}
+            <div class="label-info"><label>Имя человека: </label></div>
+            <div class="input-name-human"><input type="text" name="name"></div>
+            <div class="load-image-human">
+                <input style="display: none;" name="image" id="input_image" type="file" accept=".jpg, .jpeg">
+                <p class="label-info">Загрузить изображение</p>
+                <label for="input_image">Обзор</label>
+            </div>
+            <div class="button submit"><input type="submit" value="Загрузить в базу данных"></div>
+        </form>
+        <form action="/" method="post">
+            {% csrf_token %}
+            <div class="button back"><input type="submit" value="Вернуться назад"></div>
+        </form>
+    </div>
+</body>
+</html>

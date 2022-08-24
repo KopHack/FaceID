@@ -1,0 +1,98 @@
+body {
+    background: url(bg_body.jpg);
+    font-family: sans-serif;
+}
+
+.container {
+    width: 500px;
+    background: rgb(34, 34, 34);
+    border-radius: 10px;
+    border: 1px black solid;
+    padding: 40px;
+    margin: 200px auto;
+}
+
+.find {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.button input{
+    padding: 15px 10px 15px 10px;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit input{
+    background: #b7a757;
+}
+
+.back input{
+    background: #c54d4d;
+}
+
+.submit input:hover{
+    background: #a58e1c;
+}
+
+.back input:hover{
+    background: #911a1a;
+}
+
+.load-image-human label {
+    padding: 15px 20px 15px 20px;
+    background: #c78a57;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+}
+.load-image-human label:hover{
+    background: #d37323;
+}
+.load-image-human p{
+    float: left;
+}
+
+.input-name-human input{
+    padding: 15px 10px 15px 10px;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    background: #414141;
+    color: #c7c6c6;
+    border: 1px black solid;
+    border-radius: 10px;
+    text-align: center;
+        font-size: 14pt;
+}
+
+.input-name-human{
+display: flex;
+}
+
+.label-info{
+    color: #c7c6c6;
+}
+
+.label-info-server{
+    margin: 0px 0px 10px 0px;
+}
+
+.error {
+    color: #b33f3f;
+}
+
+.succes {
+    color: #3fb34d;
+}
+
+.name {
+    color: #b7a757;
+}

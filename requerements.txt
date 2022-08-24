@@ -1,0 +1,5 @@
+face-recognition==0.3.0
+imutils==0.5.4
+numpy==1.21.6
+opencv-python-headless==4.5.5.64
+mysql-connector-python==8.0.29

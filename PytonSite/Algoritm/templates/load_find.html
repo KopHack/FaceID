@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://gosuclygi.site/css/style.css" type="text/css">
+    <title>Главная страница</title>
+</head>
+<body>
+{% ifequal info "Человек был найден в базе данных" %}
+    <center><img src= "{{image_path}}" height = "30%" width = "30%"/></center>
+    
+    <div class="container find">
+{% else %}
+    <div class="container">
+{% endifequal %}
+        <form action="/find/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% ifequal info "Человек был найден в базе данных" %}
+                <p class="label-info-server succes">{{info}}:</p>
+                <p class="label-info-server name">{{name}}</p>
+            {% else %}
+                <p class="label-info-server error">{{info}}</p>
+            {% endifequal %}
+            <div class="load-image-human">
+                <input style="display: none;" name="image" id="input_image" type="file" accept=".jpg, .jpeg">
+                <p class="label-info">Загрузить изображение</p>
+                <label for="input_image">Обзор</label>
+            </div>
+            <div class="button submit"><input type="submit" value="Найти в базе данных"></div>
+        </form>
+        <form action="/" method="post">
+            {% csrf_token %}
+            <div class="button back"><input type="submit" value="Вернуться назад"></div>
+        </form>
+    </div>
+</body>
+</html>
